@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "773347402167",
+    "project_id": "binar-challenge-5",
+    "storage_bucket": "binar-challenge-5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:773347402167:android:a2924b8b6355e816458832",
+        "android_client_info": {
+          "package_name": "com.axellinoanggoro.binar_challenge5"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "773347402167-24vpsu6paqpfd0112r32cd7ojsfsmn4e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.axellinoanggoro.binar_challenge5",
+            "certificate_hash": "6b6f043c5170e6e68ba9fdcaf33ad665751d8bb4"
+          }
+        },
+        {
+          "client_id": "773347402167-m7pukninrk9tk0vak6ah7da2bolanue5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWYbH60bYN86I1DCbKvSvrYMoWCpGfRG0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "773347402167-m7pukninrk9tk0vak6ah7da2bolanue5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

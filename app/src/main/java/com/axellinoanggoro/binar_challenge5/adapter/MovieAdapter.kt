@@ -7,7 +7,7 @@ import com.axellinoanggoro.binar_challenge5.databinding.ItemMovieBinding
 import com.axellinoanggoro.binar_challenge5.model.ResultPopularMovie
 
 class MovieAdapter(var listMovie : List<ResultPopularMovie>) : RecyclerView.Adapter<MovieAdapter.ViewHolder>() {
-    class ViewHolder(private var binding : ItemMovieBinding) : RecyclerView.ViewHolder(binding.root) {
+    class ViewHolder(var binding : ItemMovieBinding) : RecyclerView.ViewHolder(binding.root) {
 
     }
 
@@ -17,7 +17,9 @@ class MovieAdapter(var listMovie : List<ResultPopularMovie>) : RecyclerView.Adap
     }
 
     override fun onBindViewHolder(holder: MovieAdapter.ViewHolder, position: Int) {
-
+//        holder.binding.titleMovie = listMovie[position].originalTitle
+//        holder.binding.dateMovie = listMovie[position].releaseDate
+//        holder.binding.dscMovie = listMovie[position].overview
     }
 
     override fun getItemCount(): Int {

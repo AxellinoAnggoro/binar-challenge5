@@ -1,0 +1,15 @@
+package com.axellinoanggoro.binar_challenge5.model
+
+
+import com.google.gson.annotations.SerializedName
+
+data class GetPopularMovie<T>(
+    @SerializedName("page")
+    val page: Int,
+    @SerializedName("results")
+    val results: List<ResultPopularMovie>,
+    @SerializedName("total_pages")
+    val totalPages: Int,
+    @SerializedName("total_results")
+    val totalResults: Int
+)

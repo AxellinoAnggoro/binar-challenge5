@@ -12,7 +12,7 @@ import com.google.firebase.auth.FirebaseAuth
 
 class RegisterActivity : AppCompatActivity() {
     lateinit var binding: ActivityRegisterBinding
-    lateinit var auth : FirebaseAuth
+    lateinit var auth: FirebaseAuth
     lateinit var pref: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,13 +20,13 @@ class RegisterActivity : AppCompatActivity() {
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        auth = FirebaseAuth.getInstance()
+        pref = this.getSharedPreferences("data_reg", Context.MODE_PRIVATE)
+
         binding.registerLogin.setOnClickListener {
             startActivity(Intent(this, LoginActivity::class.java))
             finish()
         }
-
-        auth = FirebaseAuth.getInstance()
-        pref = this.getSharedPreferences("data_reg", Context.MODE_PRIVATE)
 
 
         binding.registerBtn.setOnClickListener {
@@ -34,9 +34,7 @@ class RegisterActivity : AppCompatActivity() {
             var password = binding.registerPassword.text.toString()
             val getUsername = binding.registerUsername.text.toString()
 
-
-
-            if (password.isEmpty()){
+            if (password.isEmpty()) {
                 binding.registerPassword.error = "Password still empty"
                 binding.registerPassword.requestFocus()
                 return@setOnClickListener
@@ -44,7 +42,7 @@ class RegisterActivity : AppCompatActivity() {
 
             firebaseRegisterAuth(email, password)
             val save = pref.edit()
-            save.putString("username",getUsername)
+            save.putString("username", getUsername)
             save.apply()
             startActivity(Intent(this, LoginActivity::class.java))
             finish()
@@ -52,10 +50,10 @@ class RegisterActivity : AppCompatActivity() {
     }
 
     private fun firebaseRegisterAuth(email: String, password: String) {
-        auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this){
-            if (it.isSuccessful){
+        auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this) {
+            if (it.isSuccessful) {
                 Toast.makeText(this, "Register Success", Toast.LENGTH_SHORT).show()
-            }else{
+            } else {
                 Toast.makeText(this, "${it.exception?.message}", Toast.LENGTH_SHORT).show()
             }
         }

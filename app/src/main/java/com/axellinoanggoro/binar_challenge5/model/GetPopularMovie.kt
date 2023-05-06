@@ -3,7 +3,7 @@ package com.axellinoanggoro.binar_challenge5.model
 
 import com.google.gson.annotations.SerializedName
 
-data class GetPopularMovie<T>(
+data class GetPopularMovie(
     @SerializedName("page")
     val page: Int,
     @SerializedName("results")

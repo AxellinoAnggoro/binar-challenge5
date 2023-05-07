@@ -1,6 +1,5 @@
 package com.axellinoanggoro.binar_challenge5.viewmodel
 
-import android.widget.Toast
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.axellinoanggoro.binar_challenge5.model.GetPopularMovie
@@ -9,7 +8,6 @@ import com.axellinoanggoro.binar_challenge5.network.ApiClient
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import retrofit2.Retrofit
 
 class MovieViewmodel : ViewModel() {
     var liveDataMovie: MutableLiveData<List<ResultPopularMovie>> = MutableLiveData()

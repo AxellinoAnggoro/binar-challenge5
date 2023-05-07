@@ -11,7 +11,7 @@
     <com.google.android.material.textview.MaterialTextView
         style="@style/TextAppearance.Material3.HeadlineMedium"
         android:layout_gravity="center_horizontal"
-        android:text="Login"
+        android:text="@string/login"
         android:textColor="@color/black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
@@ -20,7 +20,7 @@
         style="@style/Widget.Material3.TextInputEditText.FilledBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Input Email">
+        android:hint="@string/input_email">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/loginEmail"
@@ -34,7 +34,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:endIconMode="password_toggle"
-        android:hint="Input Password">
+        android:hint="@string/input_password">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/loginPassword"
@@ -48,7 +48,7 @@
         android:id="@+id/loginBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login"
+        android:text="@string/login"
         android:textSize="15sp"
         android:layout_gravity="center_horizontal"
         />
@@ -63,7 +63,7 @@
         android:clickable="true"
         android:focusable="true"
         android:minHeight="48dp"
-        android:text="Register Here"
+        android:text="@string/register_here"
         android:textColor="@color/blue" />
 
 </LinearLayout>

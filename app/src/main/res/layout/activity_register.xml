@@ -13,13 +13,13 @@
         android:layout_gravity="center_horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Register"/>
+        android:text="@string/register"/>
 
     <com.google.android.material.textfield.TextInputLayout
         style="@style/Widget.Material3.TextInputEditText.FilledBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Input Email">
+        android:hint="@string/input_email">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/registerEmail"
@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         app:counterEnabled="true"
         app:counterMaxLength="20"
-        android:hint="Input Username">
+        android:hint="@string/input_username">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/registerUsername"
@@ -47,7 +47,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:endIconMode="password_toggle"
-        android:hint="Input Password">
+        android:hint="@string/input_password">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/registerPassword"
@@ -62,7 +62,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:endIconMode="password_toggle"
-        android:hint="Confirm Password">
+        android:hint="@string/confirm_password">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/registerConfirm"
@@ -76,7 +76,7 @@
         android:id="@+id/registerBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Register"
+        android:text="@string/register"
         android:textSize="15sp"
         android:layout_gravity="center_horizontal"/>
 
@@ -90,7 +90,7 @@
         android:clickable="true"
         android:focusable="true"
         android:minHeight="48dp"
-        android:text="Login Here"
+        android:text="@string/login_here"
         android:textColor="@color/blue" />
 
 </LinearLayout>

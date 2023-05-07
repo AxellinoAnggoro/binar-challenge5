@@ -10,9 +10,10 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.axellinoanggoro.binar_challenge5.adapter.MovieAdapter
 import com.axellinoanggoro.binar_challenge5.databinding.ActivityHomeBinding
+import com.axellinoanggoro.binar_challenge5.model.DataPopularMovie
 import com.axellinoanggoro.binar_challenge5.viewmodel.MovieViewmodel
 
-class HomeActivity : AppCompatActivity() {
+class HomeActivity : AppCompatActivity(), MovieAdapter.OnItemClickListener {
 
     private lateinit var binding: ActivityHomeBinding
     private lateinit var pref: SharedPreferences
@@ -41,8 +42,13 @@ class HomeActivity : AppCompatActivity() {
             if (it != null) {
                 binding.homeRv.layoutManager =
                     LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
-                binding.homeRv.adapter = MovieAdapter(it)
+                binding.homeRv.adapter = MovieAdapter(it, this@HomeActivity)
             }
         })
+    }
+    override fun onItemClick(data: DataPopularMovie) {
+        val intent = Intent(this, DetailActivity::class.java)
+        intent.putExtra("data_detail", data)
+        startActivity(intent)
     }
 }

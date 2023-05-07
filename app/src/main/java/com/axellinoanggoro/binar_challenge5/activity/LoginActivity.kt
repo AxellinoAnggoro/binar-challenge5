@@ -1,23 +1,28 @@
 package com.axellinoanggoro.binar_challenge5.activity
 
+import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Patterns
-import android.view.View
 import android.widget.Toast
 import com.axellinoanggoro.binar_challenge5.databinding.ActivityLoginBinding
 import com.google.firebase.auth.FirebaseAuth
 
 class LoginActivity : AppCompatActivity() {
-    lateinit var binding : ActivityLoginBinding
-    lateinit var auth : FirebaseAuth
+    private lateinit var binding : ActivityLoginBinding
+    private lateinit var auth : FirebaseAuth
+    private lateinit var pref: SharedPreferences
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        pref = this.getSharedPreferences("data_reg", Context.MODE_PRIVATE)
+
 
         binding.loginRegister.setOnClickListener {
             startActivity(Intent(this, RegisterActivity::class.java))
@@ -26,8 +31,8 @@ class LoginActivity : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
         binding.loginBtn.setOnClickListener {
-            var email = binding.loginEmail.text.toString()
-            var password = binding.loginPassword.text.toString()
+            val email = binding.loginEmail.text.toString()
+            val password = binding.loginPassword.text.toString()
 
             if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
                 binding.loginEmail.error = "Invalid Email"

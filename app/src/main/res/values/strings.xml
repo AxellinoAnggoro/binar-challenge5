@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">binar-challenge5</string>
+    <string name="input_email">Input Email</string>
+    <string name="login" translatable="false">Login</string>
+    <string name="input_password">Input Password</string>
+    <string name="register_here">Register Here</string>
+    <string name="register" translatable="false">Register</string>
+    <string name="input_username">Input Username</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="login_here">Login Here</string>
+    <string name="input_name">Input Name</string>
+    <string name="input_dob">Input DoB</string>
+    <string name="input_address">Input Address</string>
+    <string name="update">Update</string>
+    <string name="logout" translatable="false">Logout</string>
 </resources>

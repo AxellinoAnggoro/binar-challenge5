@@ -19,8 +19,8 @@
     <ImageView
         android:id="@+id/detailImg"
         android:layout_centerVertical="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:layout_gravity="center_horizontal"
         android:src="@drawable/ic_launcher_background"
         android:layout_marginBottom="20dp"/>

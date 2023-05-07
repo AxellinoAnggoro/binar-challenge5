@@ -5,15 +5,14 @@ import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Patterns
 import android.widget.Toast
 import com.axellinoanggoro.binar_challenge5.databinding.ActivityRegisterBinding
 import com.google.firebase.auth.FirebaseAuth
 
 class RegisterActivity : AppCompatActivity() {
-    lateinit var binding: ActivityRegisterBinding
-    lateinit var auth: FirebaseAuth
-    lateinit var pref: SharedPreferences
+    private lateinit var binding: ActivityRegisterBinding
+    private lateinit var auth: FirebaseAuth
+    private lateinit var pref: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,8 +29,8 @@ class RegisterActivity : AppCompatActivity() {
 
 
         binding.registerBtn.setOnClickListener {
-            var email = binding.registerEmail.text.toString()
-            var password = binding.registerPassword.text.toString()
+            val email = binding.registerEmail.text.toString()
+            val password = binding.registerPassword.text.toString()
             val getUsername = binding.registerUsername.text.toString()
 
             if (password.isEmpty()) {
